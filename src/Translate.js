@@ -65,7 +65,7 @@ export default function Translate() {
 </div>
 <div className="">
     <div className="hidden h-screen" id="cont" style={{display:"none"}}>
-      <div className="md:flex md:h-screen  md:justify-between  grid grid-cols-1 h-screen md:flex-row md:items-center md:mx-44 mx-6">
+      <div className="md:flex md:h-screen  md:justify-between  grid grid-cols-1 mt-3 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
         <div className="md:order-2">
         <img src={image} alt="Image here" className="w-[400px] md:w-auto"/>
         </div>
@@ -118,12 +118,12 @@ export default function Translate() {
           </div>
         </Form>
       </div> */}
-      <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 " id="formm">
-	<div class="relative py-3 sm:max-w-xl sm:mx-auto ">
+      <div class="min-h-screen  py-6 flex flex-col justify-center sm:py-12  " id="formm">
+	<div class="relative py-3 sm:max-w-xl mx-auto  w-[80%] rounded-xl">
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+			class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl">
 		</div>
-		<div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+		<div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20">
 			<div class="max-w-md mx-auto">
 				<div>
 					<h1 class="text-2xl font-semibold">Go first with TranslateLingo 💜</h1>
@@ -152,6 +152,8 @@ export default function Translate() {
 		</div>
 	</div>
 </div>
+<p className="text-center pb-6">Made with 💜 by Sneha  </p>
+
       </div>
     </div>
     </> 
