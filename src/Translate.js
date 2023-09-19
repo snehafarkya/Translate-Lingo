@@ -15,7 +15,7 @@ export default function Translate() {
     var spin = document.getElementById('spin').style.display = "none"
     var cont = document.getElementById('cont').style.display = "block"
 
-  }, 6000)
+  }, 5000)
   // get the language of text input
   const getLanguageSource = () => {
     axios
@@ -64,8 +64,8 @@ export default function Translate() {
 <div className="h-screen loader " id="spin">
 </div>
 <div className="">
-    <div className="hidden " id="cont" style={{display:"none"}}>
-      <div className="md:flex md:h-screen  md:justify-between md:mt-[800px] mt-[600px] grid grid-cols-1 h-screen md:flex-row md:items-center md:mx-44 mx-6">
+    <div className="hidden h-screen" id="cont" style={{display:"none"}}>
+      <div className="md:flex md:h-screen  md:justify-between  grid grid-cols-1 h-screen md:flex-row md:items-center md:mx-44 mx-6">
         <div className="md:order-2">
         <img src={image} alt="Image here" className="w-[400px] md:w-auto"/>
         </div>
@@ -118,7 +118,7 @@ export default function Translate() {
           </div>
         </Form>
       </div> */}
-      <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 ">
+      <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 " id="formm">
 	<div class="relative py-3 sm:max-w-xl sm:mx-auto ">
 		<div
 			class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
@@ -131,11 +131,11 @@ export default function Translate() {
 				<div class="divide-y divide-gray-200">
 					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 						<div class="relative">
-							<input autocomplete="off" id="email" name="email" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" onChange={(e) => setTextInput(e.target.value)} />
+							<input autocomplete="off" id="email" name="email" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" onChange={(e) => setTextInput(e.target.value)} />
 							<label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Type text to translate</label>
 						</div>
 						<div class="relative">
-							<input id="text" name="text" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" value={resultText}/>
+							<input autocomplete="off" id="text" name="text" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" value={resultText}/>
 							<label for="text" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" >Your translated text</label>
 						</div>
             <select className="select placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 " onChange={languageKey}>
