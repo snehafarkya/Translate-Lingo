@@ -10,7 +10,11 @@ export default function Translate() {
   const [textLanguageKey, setTextLanguageKey] = useState("");
   const [languagesList, setLanguagesList] = useState([]);
   const [detectLanguageKey, setdetectedLanguageKey] = useState("");
+  setTimeout(function(){
+    var spin = document.getElementById('spin').style.display = "none"
+    var cont = document.getElementById('cont').style.display = "block"
 
+  }, 6000)
   // get the language of text input
   const getLanguageSource = () => {
     axios
@@ -55,7 +59,11 @@ export default function Translate() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textInput]);
   return (
-    <div className="container">
+     <>
+<div className="h-screen loader " id="spin">
+</div>
+<div className="">
+    <div className="hidden visiblity-none container" id="cont" style={{display:"none"}}>
       <div className="title">
         <h2>
           {" "}
@@ -93,6 +101,8 @@ export default function Translate() {
           </div>
         </Form>
       </div>
+      </div>
     </div>
+    </> 
   );
 }
