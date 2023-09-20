@@ -159,10 +159,11 @@ export default function Translate() {
 						<div class="relative flex">
 							<input readonly autocomplete="off" id="text" name="text" type="text" class=" mt-3 peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" value={resultText}/>
               <label for="text" class="absolute left-0 -top-6.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" >Your translated text</label>
-              <button onClick={copy}> <AiOutlineCopy id="file" /> <TiTickOutline id="right" className="hidden"/> </button>
             </div>
-						<div class="relative">
+						<div class="relative flex gap-2">
 							<button class="bg-purple-700 text-white px-8 py-4 hover:bg-purple-600 flex gap-1 justify-center items-center rounded-lg" onClick={translateText}>Translate</button>
+              <button onClick={copy} className="border-solid border-purple-700 bg-white rounded-lg "> <AiOutlineCopy id="file" /> Copy <TiTickOutline id="right" className="hidden"/> </button>
+
 						</div>
 					</div>
 				</div>
