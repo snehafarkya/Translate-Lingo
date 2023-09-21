@@ -163,7 +163,7 @@ export default function Translate() {
               <label for="text" class="absolute left-0 -top-6.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" >Your translated text</label>
             </div>
 						<div class="relative flex gap-2">
-							<button class="bg-purple-700 text-white px-8 py-4 hover:bg-purple-600 flex gap-1 justify-center items-center rounded-lg" onClick={translateText}>Translate</button>
+							<button class="bg-purple-700 text-white px-8 py-4 hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg" onClick={translateText}>Translate</button>
               <button onClick={copy} className="border-solid border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"> <AiOutlineCopy id="file" /> {buttonText} <TiTickOutline id="right" className="hidden"/> </button>
 
 						</div>
