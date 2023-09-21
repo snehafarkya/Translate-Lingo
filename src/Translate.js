@@ -72,7 +72,7 @@ export default function Translate() {
     var file = document.getElementById('file').style.display = "none";
     var right = document.getElementById('right').style.display = "block";
     setButtonText('Copied');
-      var clickMe = document.getElementById('clickMe')
+      // var clickMe = document.getElementById('clickMe').style.background = "green";
     }
     else {
       alert("Nothing to copy!")
