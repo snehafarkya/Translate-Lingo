@@ -11,7 +11,7 @@ import {
 import image from "./digital-translator-abstract-concept-illustration_335657-3769.avif";
 import { Form, TextArea, Button } from "semantic-ui-react";
 import axios from "axios";
-
+import Navbar from "./components/Navbar";
 export default function Translate() {
   const [textInput, setTextInput] = useState("");
   const [resultText, setResultText] = useState("");
@@ -87,8 +87,9 @@ export default function Translate() {
       <div className="h-screen loader " id="spin"></div>
       <div className="">
         <div className="hidden h-screen" id="cont" style={{ display: "none" }}>
-          <a href="https://Translate-lingo.authui.site/">Sign In</a>
-          <div className="md:flex md:h-screen  md:justify-between  grid grid-cols-1 mt-12 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
+          {/* <a href="https://Translate-lingo.authui.site/">Sign In</a> */}
+          <Navbar/>
+          <div className="md:flex   md:justify-between  grid grid-cols-1 mt-12 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
             <div className="md:order-2">
               <img
                 src={image}
@@ -153,6 +154,7 @@ export default function Translate() {
           </div>
         </Form>
       </div> */}
+
           <div
             class="min-h-full  py-6 flex flex-col justify-center sm:py-12  "
             id="formm"
