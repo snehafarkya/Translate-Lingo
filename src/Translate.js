@@ -3,13 +3,9 @@ import { AiOutlineCopy } from "react-icons/ai";
 import { TiTickOutline } from "react-icons/ti";
 
 import {
-  RiArrowRightCircleFill,
-  RiCopyleftFill,
-  RiLoopRightLine,
   RiTranslate,
 } from "react-icons/ri";
 import image from "./digital-translator-abstract-concept-illustration_335657-3769.avif";
-import { Form, TextArea, Button } from "semantic-ui-react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 export default function Translate() {
