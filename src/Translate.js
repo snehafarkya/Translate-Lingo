@@ -229,6 +229,9 @@ export default function Translate() {
                           <TiTickOutline id="right" className="hidden" />{" "}
                         </button>
                       </div>
+                      <div className="">
+                        <p>Want to record and let AI type? <a href="/reactspeech" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,9 +1,12 @@
 import { useRef, useState } from "react";
-import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 import { TiMicrophone, TiTickOutline } from "react-icons/ti";
 import { AiOutlineClear } from "react-icons/ai";
 import { AiOutlineCopy } from "react-icons/ai";
 import { RiMoonClearFill } from "react-icons/ri";
+import Navbar from "./Navbar";
 export default function ReactSpeech() {
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isListening, setIsListening] = useState(false);
@@ -43,11 +46,11 @@ export default function ReactSpeech() {
       var file = (document.getElementById("file").style.display = "none");
       var right = (document.getElementById("right").style.display = "block");
       setButtonText("Copied");
-    setTimeout(function(){
-      var file = (document.getElementById("file").style.display = "block");
-      var right = (document.getElementById("right").style.display = "none");
-      setButtonText("Copy")
-    }, 1000);
+      setTimeout(function () {
+        var file = (document.getElementById("file").style.display = "block");
+        var right = (document.getElementById("right").style.display = "none");
+        setButtonText("Copy");
+      }, 1000);
 
       // var clickMe = document.getElementById('clickMe').style.background = "green";
     } else {
@@ -55,46 +58,83 @@ export default function ReactSpeech() {
     }
   };
   return (
-    <div className="microphone-wrapper">
-      <div className="mircophone-container flex gap-2 items-center">
+    <>
+      <div className="h-screen m-0 p-0 w-screen">
+        <Navbar />
         <div
-          className="flex gap-2 items-center"
-          ref={microphoneRef}
-          onClick={handleListing}
+          class="min-h-full  py-6 flex flex-col justify-center sm:py-12  "
+          id="formm"
         >
-          {/* <img src={microPhoneIcon} className="microphone-icon" /> */}
-          <TiMicrophone className="text-purple-700"/>
-        </div>
-        <div className="text-purple-700 cursor-pointer" onClick={handleListing} >
-          {isListening ? "Listening........." : "Click to start Listening"}
-        </div>
-        {isListening && (
-          <button className="microphone-stop btn text-purple-700" onClick={stopHandle}>
-            Stop
-          </button>
-        )}
-      </div>
-      {transcript && (
-        <div className="flex gap-2 items-center flex-col">
-          {/* <div className="microphone-result-text">{transcript}</div> */}
-          <input type="text" name="text" id="text" className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm " value={transcript} />
-          <div className="buttons flex gap-2 items-center">
-          <button class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg" onClick={handleReset}>
-
-            Reset 
-          </button>
-          <button
-            onClick={copy}
-            id="clickMe"
-            className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
-          >
-          {" "}{buttonText}
-            <AiOutlineCopy id="file" /> {" "}
-            <TiTickOutline id="right" className="hidden" />{" "}
-          </button>
+          <div class="relative py-3 sm:max-w-xl mx-auto  rounded-xl">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl"></div>
+            <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20">
+              <div class="max-w-md mx-auto flex flex-col gap-4">
+              <div>
+                    <h1 class="text-2xl font-semibold">
+                      Go first with TranslateLingo 💜
+                    </h1>
+                  </div>
+                <div className=" flex gap-2 items-center justify-center">
+                  <div
+                    className="flex gap-2 items-center justify-center"
+                    ref={microphoneRef}
+                    onClick={handleListing}
+                  >
+                    {/* <img src={microPhoneIcon} className="microphone-icon" /> */}
+                    <TiMicrophone className="text-purple-700 font-bold" />
+                  </div>
+                  <div
+                    className="text-purple-700 cursor-pointer font-bold transition  hover:scale-[1.02]" 
+                    onClick={handleListing}
+                  >
+                    {isListening
+                      ? "Listening........."
+                      : "Click to start Listening"}
+                  </div>
+                  {isListening && (
+                    <button
+                      className="microphone-stop btn text-purple-700"
+                      onClick={stopHandle}
+                    >
+                      Stop
+                    </button>
+                  )}
+                </div>
+                {transcript && (
+                  <div className="flex gap-4 items-center flex-col">
+                    {/* <div className="microphone-result-text">{transcript}</div> */}
+                    <input
+                      type="text"
+                      name="text"
+                      id="text"
+                      className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm "
+                      value={transcript}
+                    />
+                    <div className="buttons flex gap-2 items-center">
+                      <button
+                        class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                        onClick={handleReset}
+                      >
+                        Reset
+                      </button>
+                      <button
+                        onClick={copy}
+                        id="clickMe"
+                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                      >
+                        {" "}
+                        {buttonText}
+                        <AiOutlineCopy id="file" />{" "}
+                        <TiTickOutline id="right" className="hidden" />{" "}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
