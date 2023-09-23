@@ -73,6 +73,12 @@ export default function Translate() {
       var file = (document.getElementById("file").style.display = "none");
       var right = (document.getElementById("right").style.display = "block");
       setButtonText("Copied");
+      setTimeout(function () {
+        var file = (document.getElementById("file").style.display = "block");
+        var right = (document.getElementById("right").style.display = "none");
+        setButtonText("Copy");
+      }, 1000);
+
       // var clickMe = document.getElementById('clickMe').style.background = "green";
     } else {
       alert("Nothing to copy!");
@@ -214,7 +220,7 @@ export default function Translate() {
                       </div>
                       <div class="relative flex gap-2">
                         <button
-                          class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                          class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
                           onClick={translateText}
                         >
                           Translate
@@ -222,7 +228,7 @@ export default function Translate() {
                         <button
                           onClick={copy}
                           id="clickMe"
-                          className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                          className=" transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
                         >
                           {" "}
                           <AiOutlineCopy id="file" /> {buttonText}{" "}
