@@ -2,8 +2,8 @@ import React from 'react'
 import logo from '../logo.png'
 export default function Navbar() {
   return (
-    <div className='mt-12 md:mx-40 mx-6'>
-      <img src={logo} alt="" className='h-36' />
+    <div className=' md:px-40 px-6 bg-purple-100 sticky'>
+      <img src={logo} alt="" className='h-28' />
     </div>
   )
 }
