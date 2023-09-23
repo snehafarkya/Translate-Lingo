@@ -93,7 +93,7 @@ export default function ReactSpeech() {
                   </div>
                   {isListening && (
                     <button
-                      className="microphone-stop btn text-purple-700"
+                      className=" border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
                       onClick={stopHandle}
                     >
                       Stop
@@ -102,12 +102,11 @@ export default function ReactSpeech() {
                 </div>
                 {transcript && (
                   <div className="flex gap-4 items-center flex-col">
-                    {/* <div className="microphone-result-text">{transcript}</div> */}
                     <input
                       type="text"
                       name="text"
                       id="text"
-                      className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm "
+                      className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm focus:border-b focus:outline-none"
                       value={transcript}
                     />
                     <div className="buttons flex gap-2 items-center">
@@ -120,7 +119,7 @@ export default function ReactSpeech() {
                       <button
                         onClick={copy}
                         id="clickMe"
-                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150"
                       >
                         {" "}
                         {buttonText}
@@ -128,6 +127,9 @@ export default function ReactSpeech() {
                         <TiTickOutline id="right" className="hidden" />{" "}
                       </button>
                     </div>
+                    <div className="">
+                        <p>Want to Translate language? <a href="/" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                      </div>
                   </div>
                 )}
               </div>
