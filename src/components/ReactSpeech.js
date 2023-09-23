@@ -59,7 +59,7 @@ export default function ReactSpeech() {
   };
   return (
     <>
-      <div className="h-screen m-0 p-0 w-screen">
+      <div className="h-screen w-screen">
         <Navbar />
         <div
           class="min-h-full  py-6 flex flex-col justify-center sm:py-12  "
