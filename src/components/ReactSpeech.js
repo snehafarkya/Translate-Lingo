@@ -81,7 +81,7 @@ export default function ReactSpeech() {
                     onClick={handleListing}
                   >
                     {/* <img src={microPhoneIcon} className="microphone-icon" /> */}
-                    <TiMicrophone className="text-purple-700 font-bold" />
+                    <TiMicrophone className="text-purple-700 font-bold cursor-pointer" />
                   </div>
                   <div
                     className="text-purple-700 cursor-pointer font-bold transition  hover:scale-[1.02]" 
@@ -93,7 +93,7 @@ export default function ReactSpeech() {
                   </div>
                   {isListening && (
                     <button
-                      className=" border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                      className=" border-solid hover:shadow-lg border-transparent font-semibold hover:border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-200" 
                       onClick={stopHandle}
                     >
                       Stop
@@ -111,7 +111,7 @@ export default function ReactSpeech() {
                     />
                     <div className="buttons flex gap-2 items-center">
                       <button
-                        class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                        class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200"
                         onClick={handleReset}
                       >
                         Reset
@@ -119,7 +119,7 @@ export default function ReactSpeech() {
                       <button
                         onClick={copy}
                         id="clickMe"
-                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150"
+                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
                       >
                         {" "}
                         {buttonText}
