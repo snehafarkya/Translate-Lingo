@@ -136,6 +136,8 @@ export default function ReactSpeech() {
             </div>
           </div>
         </div>
+        <p className="text-center pb-6">Made with 💜 by Sneha </p>
+
       </div>
     </>
   );
