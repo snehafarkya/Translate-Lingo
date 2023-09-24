@@ -89,7 +89,7 @@ export default function ReactSpeech() {
                   >
                     {isListening
                       ? "Listening........."
-                      : "Click to start Listening"}
+                      : "Click to say something"}
                   </div>
                   {isListening && (
                     <button
