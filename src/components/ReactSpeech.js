@@ -1,5 +1,4 @@
-import { useRef, useState, useEffect } from "react";
-import axios from "axios";
+import { useRef, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -11,84 +10,33 @@ import Navbar from "./Navbar";
 export default function ReactSpeech() {
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isListening, setIsListening] = useState(false);
-  const [textInput, setTextInput] = useState("");
-  const [resultText, setResultText] = useState("");
-  const [textLanguageKey, setTextLanguageKey] = useState("");
-  const [languagesList, setLanguagesList] = useState([]);
-  const [detectLanguageKey, setdetectedLanguageKey] = useState("");
-  const ref = useRef(null);
   const [buttonText, setButtonText] = useState("Copy");
 
   const microphoneRef = useRef(null);
-  
-
-
- // get the language of text input
- const getLanguageSource = () => {
-  axios
-    .post(`https://libretranslate.de/detect`, {
-      q: textInput,
-    })
-    .then((response) => {
-      setdetectedLanguageKey(response.data[0].language);
-      console.log(response.data[0].language);
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    return (
+      <div className="mircophone-container">
+        Browser is not Support Speech Recognition.
+      </div>
+    );
+  }
+  const handleListing = () => {
+    setIsListening(true);
+    microphoneRef.current.classList.add("listening");
+    SpeechRecognition.startListening({
+      continuous: true,
     });
-};
-
-// translate the input text and set it in result field
-const translateText = () => {
-  setResultText(textInput);
-  console.log(setTextInput(ref.current.value))
-  getLanguageSource();
-
-  let data = {
-    q: textInput,
-    source: detectLanguageKey,
-    target: textLanguageKey,
   };
-  axios.post(`https://libretranslate.de/translate`, data).then((response) => {
-    setResultText(response.data.translatedText);
-    console.log(response.data.translatedText);
-  });
-};
+  const stopHandle = () => {
+    setIsListening(false);
+    microphoneRef.current.classList.remove("listening");
+    SpeechRecognition.stopListening();
+  };
+  const handleReset = () => {
+    stopHandle();
+    resetTranscript();
+  };
 
-const languageKey = (selectedLanguage) => {
-  setTextLanguageKey(selectedLanguage.target.value);
-  console.log(selectedLanguage.target.value);
-};
-
-useEffect(() => {
-  axios.get(`https://libretranslate.de/languages`).then((response) => {
-    setLanguagesList(response.data);
-    console.log("lang", response.data);
-  });
-
-  getLanguageSource();
-}, [textInput]);
-
-if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-  return (
-    <div className="mircophone-container">
-      Browser is not Support Speech Recognition.
-    </div>
-  );
-}
-const handleListing = () => {
-  setIsListening(true);
-  microphoneRef.current.classList.add("listening");
-  SpeechRecognition.startListening({
-    continuous: true,
-  });
-};
-const stopHandle = () => {
-  setIsListening(false);
-  microphoneRef.current.classList.remove("listening");
-  SpeechRecognition.stopListening();
-};
-const handleReset = () => {
-  stopHandle();
-  resetTranscript();
-};
   const copy = () => {
     var mytext = document.getElementById("text").value;
 
@@ -148,61 +96,22 @@ const handleReset = () => {
                       className=" border-solid hover:shadow-lg border-transparent font-semibold hover:border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-200" 
                       onClick={stopHandle}
                     >
-                      Pause
+                      Stop
                     </button>
                   )}
                 </div>
                 {transcript && (
-                  <>
                   <div className="flex gap-4 items-center flex-col">
                     <input
                       type="text"
                       name="text"
-                      id="mytext"
+                      id="text"
                       className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm focus:border-b focus:outline-none"
                       value={transcript}
-                      ref={ref}
-                      onChange={(e) => setTextInput(e.target.value)}
                     />
-                    <select
-                        className="select placeholder-transparent h-10  border-b-2 bg-white border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 "
-                        onChange={languageKey}
-                      >
-                        {languagesList.map((language) => {
-                          return (
-                            <option value={language.code}>
-                              {language.name}
-                            </option>
-                          );
-                        })}
-                      </select>
-                      <div class="relative flex">
-                        <input
-                          readonly
-                          autocomplete="off"
-                          id="text"
-                          name="text"
-                          type="text"
-                          class=" mt-3 peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          value={resultText}
-                        />
-                        <label
-                          for="text"
-                          class="absolute left-0 -top-6.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                        >
-                          Your translated text
-                        </label>
-                      </div>
-                        
                     <div className="buttons flex gap-2 items-center">
-                    <button
-                          class="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
-                          onClick={translateText}
-                        >
-                          Translate
-                        </button>
                       <button
-                        class="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
+                        class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200"
                         onClick={handleReset}
                       >
                         Reset
@@ -218,20 +127,15 @@ const handleReset = () => {
                         <TiTickOutline id="right" className="hidden" />{" "}
                       </button>
                     </div>
-               
-                      
-                     </div>
-                     <div className="">
-                       <p>Want to Translate language? <a href="/" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
-                     </div>
-                  </>
-
+                    <div className="">
+                        <p>Want to Translate language? <a href="/" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                      </div>
+                  </div>
                 )}
               </div>
             </div>
           </div>
         </div>
-        <p className="text-center pb-6">Made with 💜 by Sneha </p>
       </div>
     </>
   );
