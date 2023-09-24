@@ -160,7 +160,7 @@ const handleReset = () => {
                       name="text"
                       id="mytext"
                       className=" text-purple-700 px-4 py-4 text-md border-b border-purple-700  shadow-sm focus:border-b focus:outline-none"
-                      value={transcript}
+                      defaultValue={transcript}
                       ref={ref}
                       onChange={(e) => setTextInput(e.target.value)}
                     />
