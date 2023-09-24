@@ -165,7 +165,7 @@ useEffect(() => {
                       onChange={(e) => setTextInput(e.target.value)}
                     />
                     <select
-                        className="select placeholder-transparent h-10 w-full border-b-2 bg-white border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 "
+                        className="select placeholder-transparent h-10  border-b-2 bg-white border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 "
                         onChange={languageKey}
                       >
                         {languagesList.map((language) => {
@@ -196,13 +196,13 @@ useEffect(() => {
                         
                     <div className="buttons flex gap-2 items-center">
                     <button
-                          class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200"
+                          class="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
                           onClick={translateText}
                         >
                           Translate
                         </button>
                       <button
-                        class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200"
+                        class="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
                         onClick={handleReset}
                       >
                         Reset
