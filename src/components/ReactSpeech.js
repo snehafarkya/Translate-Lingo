@@ -20,29 +20,7 @@ export default function ReactSpeech() {
   const [buttonText, setButtonText] = useState("Copy");
 
   const microphoneRef = useRef(null);
-  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-    return (
-      <div className="mircophone-container">
-        Browser is not Support Speech Recognition.
-      </div>
-    );
-  }
-  const handleListing = () => {
-    setIsListening(true);
-    microphoneRef.current.classList.add("listening");
-    SpeechRecognition.startListening({
-      continuous: true,
-    });
-  };
-  const stopHandle = () => {
-    setIsListening(false);
-    microphoneRef.current.classList.remove("listening");
-    SpeechRecognition.stopListening();
-  };
-  const handleReset = () => {
-    stopHandle();
-    resetTranscript();
-  };
+  
 
 
  // get the language of text input
@@ -86,9 +64,31 @@ useEffect(() => {
   });
 
   getLanguageSource();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [textInput]);
 
+if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+  return (
+    <div className="mircophone-container">
+      Browser is not Support Speech Recognition.
+    </div>
+  );
+}
+const handleListing = () => {
+  setIsListening(true);
+  microphoneRef.current.classList.add("listening");
+  SpeechRecognition.startListening({
+    continuous: true,
+  });
+};
+const stopHandle = () => {
+  setIsListening(false);
+  microphoneRef.current.classList.remove("listening");
+  SpeechRecognition.stopListening();
+};
+const handleReset = () => {
+  stopHandle();
+  resetTranscript();
+};
   const copy = () => {
     var mytext = document.getElementById("text").value;
 
