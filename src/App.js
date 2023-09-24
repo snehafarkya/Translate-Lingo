@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path='/' element={ <Translate/>}/>
-          <Route path='/reactspeech' element={ <ReactSpeech/>}/>
+          <Route path='/speech-to-text' element={ <ReactSpeech/>}/>
           <Route path='/text-to-speech' element={<Speech/>} />
         </Routes>
       </header>
