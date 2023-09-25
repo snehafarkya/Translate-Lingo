@@ -5,6 +5,15 @@ import { RiSpeakFill } from "react-icons/ri";
 const Speech = () => {
 	const [value, setValue] = React.useState("");
 	const { speak } = useSpeechSynthesis();
+  
+  const click = ()=>{
+    if(!value){
+      speak({ text: "Nothing to speak" })
+    }
+    else{
+      speak({ text: value })
+    }
+  }
 	return (
     <div className="h-screen w-screen flex flex-col  ">
       <Navbar />
@@ -27,13 +36,14 @@ const Speech = () => {
 					rows="8"
           className="w-full border-2 rounded-xl border-purple-300 hover:border-purple-700 focus:outline-none focus:ring-0 p-4 hover:shadow-md transition duration-200"
 					value={value}
+          id="text"
 					onChange={(e) => setValue(e.target.value)}
 				></textarea>
 			</div>
 			<div className="group flex justify-center">
 				<button 
           class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
-          onClick={() => speak({ text: value })}>
+          onClick={click }>
 					Listen <RiSpeakFill/>
 				</button>
 			</div>
