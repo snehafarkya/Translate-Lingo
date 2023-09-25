@@ -88,10 +88,10 @@ export default function Translate() {
     <>
       <div className="h-screen loader " id="spin"></div>
       <div className="">
-        <div className="hidden h-screen" id="cont" style={{ display: "none" }}>
+        <div className="hidden  bg-white  h-screen" id="cont" style={{ display: "none" }}>
           {/* <a href="https://Translate-lingo.authui.site/">Sign In</a> */}
           <Navbar/>
-          <div className="md:flex   md:justify-between  grid grid-cols-1 mt-12 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
+          <div className="md:flex md:justify-between  grid grid-cols-1 mt-12 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
             <div className="md:order-2">
               <img
                 src={image}
