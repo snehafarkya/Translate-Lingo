@@ -38,7 +38,7 @@ const Speech = () => {
 					value={value}
           id="text"
 					onChange={(e) => setValue(e.target.value)}
-          placeholder="Write here"
+          placeholder="Start typing here..."
 				></textarea>
 			</div>
 			<div className="group flex justify-center">
