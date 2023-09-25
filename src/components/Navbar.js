@@ -24,8 +24,8 @@ export default function Navbar() {
       {click && (
         <div className="links flex-col justify-center gap-8 z-50 bg-purple-100 absolute w-full">
         <Link to={'/'} className='text-lg font-semibold hover:text-purple-900 hover:shadow-lg text-purple-700 px-4 py-2 border-2 transition duration-200 border-transparent hover:border-purple-900 rounded-lg flex items-center gap-1 w-max mx-6 my-4'> Home <RiHome2Fill/> </Link>
-        <Link to={'/'} className='text-lg font-semibold hover:text-purple-900 hover:shadow-lg text-purple-700 px-4 py-2 border-2 transition duration-200 border-transparent hover:border-purple-900 rounded-lg flex items-center gap-1 w-max mx-6 my-4'> Speak here <RiSpeakFill/> </Link>
-        <Link to={'/'} className='text-lg font-semibold hover:text-purple-900 hover:shadow-lg text-purple-700 px-4 py-2 border-2 transition duration-200 border-transparent hover:border-purple-900 rounded-lg flex items-center gap-1 w-max mx-6 my-4'> Listen here <AiFillAudio/> </Link>
+        <Link to={'/speech-to-text'} className='text-lg font-semibold hover:text-purple-900 hover:shadow-lg text-purple-700 px-4 py-2 border-2 transition duration-200 border-transparent hover:border-purple-900 rounded-lg flex items-center gap-1 w-max mx-6 my-4'> Speak here <RiSpeakFill/> </Link>
+        <Link to={'/text-to-speech'} className='text-lg font-semibold hover:text-purple-900 hover:shadow-lg text-purple-700 px-4 py-2 border-2 transition duration-200 border-transparent hover:border-purple-900 rounded-lg flex items-center gap-1 w-max mx-6 my-4'> Listen here <AiFillAudio/> </Link>
 
       </div>
       )}
