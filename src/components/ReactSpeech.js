@@ -59,10 +59,10 @@ export default function ReactSpeech() {
   };
   return (
     <>
-      <div className="h-screen w-screen">
+      <div className="h-screen w-screen flex flex-col ">
         <Navbar />
         <div
-          class="min-h-full  py-6 flex flex-col justify-center sm:py-12  "
+          class="  py-6 flex flex-col my-auto items-center justify-center sm:py-12  "
           id="formm"
         >
           <div class="relative py-3 sm:max-w-xl mx-auto  rounded-xl">
