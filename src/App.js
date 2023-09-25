@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Translate from './Translate';
 import ReactSpeech from './components/ReactSpeech';
-// import Speech from './components/TexttoSpeech';
+import Speech from './components/TexttoSpeech';
 function App() {
   return (
     <div className="App">
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Translate/>}/>
           <Route path='/speech-to-text' element={ <ReactSpeech/>}/>
-          {/* <Route path='/text-to-speech' element={<Speech/>} /> */}
+          <Route path='/text-to-speech' element={<Speech/>} />
         </Routes>
       </header>
     </div>

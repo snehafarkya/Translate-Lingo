@@ -128,7 +128,7 @@ export default function ReactSpeech() {
                       </button>
                     </div>
                     <div className="">
-                        <p>Want to Translate Language? <a href="/speech-to-text" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                        <p>Want to Translate Language? <a href="/" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
                       </div>
                   </div>
                 )}

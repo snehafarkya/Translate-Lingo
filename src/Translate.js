@@ -236,7 +236,7 @@ export default function Translate() {
                         </button>
                       </div>
                       <div className="">
-                        <p>Want to record and let AI type? <a href="/reactspeech" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                        <p>Want to record and let AI type? <a href="/speech-to-text" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
                       </div>
                     </div>
                   </div>
