@@ -29,7 +29,7 @@ const Speech = () => {
                     </h1>
                   </div>
 			<div className="group">
-				<h2>Convert text to speech</h2>
+				<h3 className="text-purple-700">Convert text to speech</h3>
 			</div>
 			<div className="group">
 				<textarea
@@ -38,6 +38,7 @@ const Speech = () => {
 					value={value}
           id="text"
 					onChange={(e) => setValue(e.target.value)}
+          placeholder="Write here"
 				></textarea>
 			</div>
 			<div className="group flex justify-center">
