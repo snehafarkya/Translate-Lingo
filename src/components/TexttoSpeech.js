@@ -6,8 +6,8 @@ const Speech = () => {
 	const [value, setValue] = React.useState("");
 	const { speak } = useSpeechSynthesis();
 	return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      {/* <Navbar /> */}
+    <div className="h-screen w-screen flex flex-col  ">
+      <Navbar />
 
 		<div className="speech flex my-auto">
     <div class="relative py-3 sm:max-w-xl mx-auto  rounded-xl">
