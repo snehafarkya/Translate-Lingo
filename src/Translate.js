@@ -230,10 +230,10 @@ export default function Translate() {
                         <button
                           onClick={copy}
                           id="clickMe"
-                          className=" transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                          className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
                         >
-                          {" "}
-                          <AiOutlineCopy id="file" /> {buttonText}{" "}
+                          {" "}{buttonText}
+                          <AiOutlineCopy id="file" /> {" "}
                           <TiTickOutline id="right" className="hidden" />{" "}
                         </button>
                       </div>
