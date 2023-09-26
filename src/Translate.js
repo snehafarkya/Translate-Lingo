@@ -3,6 +3,8 @@ import { AiOutlineCopy } from "react-icons/ai";
 import { TiTickOutline } from "react-icons/ti";
 
 import {
+  RiArrowDownCircleLine,
+  RiArrowDownLine,
   RiTranslate,
 } from "react-icons/ri";
 import image from "./digital-translator-abstract-concept-illustration_335657-3769.avif";
@@ -116,8 +118,8 @@ export default function Translate() {
                   Relationships Like Never Before!
                 </p>
                 <a href="#formm">
-                  <button className="bg-purple-700 text-white px-12 py-4 rounded-md hover:trasition hover:bg-purple-500 hover:duration-200">
-                    Start here
+                  <button className="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200" >
+                    Get Started <RiArrowDownLine />
                   </button>
                 </a>
               </div>
