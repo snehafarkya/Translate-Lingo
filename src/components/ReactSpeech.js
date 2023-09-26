@@ -5,7 +5,7 @@ import SpeechRecognition, {
 import { TiMicrophone, TiTickOutline } from "react-icons/ti";
 import { AiOutlineClear } from "react-icons/ai";
 import { AiOutlineCopy } from "react-icons/ai";
-import { RiMoonClearFill } from "react-icons/ri";
+import { RiFileSettingsLine, RiMoonClearFill } from "react-icons/ri";
 import Navbar from "./Navbar";
 export default function ReactSpeech() {
   const { transcript, resetTranscript } = useSpeechRecognition();
@@ -114,12 +114,12 @@ export default function ReactSpeech() {
                         class="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200"
                         onClick={handleReset}
                       >
-                        Reset
+                        Reset <RiFileSettingsLine/>
                       </button>
                       <button
                         onClick={copy}
                         id="clickMe"
-                        className="border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
+                        className=" gap-1 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
                       >
                         {" "}
                         {buttonText}
