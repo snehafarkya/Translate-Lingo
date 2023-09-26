@@ -86,7 +86,7 @@ export default function Translate() {
   };
   return (
     <>
-      <div className="h-screen loader " id="spin"></div>
+      <div className="h-screen loader bg-transparent" id="spin"></div>
       <div className="">
         <div className="hidden  bg-white  h-screen" id="cont" style={{ display: "none" }}>
           {/* <a href="https://Translate-lingo.authui.site/">Sign In</a> */}

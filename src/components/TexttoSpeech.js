@@ -5,7 +5,18 @@ import { AiOutlineAudio } from "react-icons/ai";
 const Speech = () => {
 	const [value, setValue] = React.useState("");
 	const { speak } = useSpeechSynthesis();
-  
+  // const ExamplePdf = new Audio('../end(enhanced).wav');
+  // const Audio = '/end(enhanced).wav';
+
+  // const downloadFile =(url)=>{
+  //   const fileName = url.split('/').pop();
+  //   const aTag = document.createElement("a");
+  //   aTag.href = url;
+  //   aTag.setAttribute('download', fileName);
+  //   document.body.appendChild(aTag);
+  //   aTag.click();
+  //   aTag.remove();
+  // }
   const click = ()=>{
     if(!value){
       speak({ text: "Nothing to speak! Write something first." })
@@ -14,6 +25,7 @@ const Speech = () => {
       speak({ text: value })
     }
   }
+
 	return (
     <div className="h-screen w-screen flex flex-col  ">
       <Navbar />
@@ -47,6 +59,16 @@ const Speech = () => {
           onClick={click }>
 					Listen <AiOutlineAudio/>
 				</button>
+     {/* <button> <audio src={require("../audi.mp3")} autoPlay controls > Download </audio></button> */}
+
+        {/* <a
+        href={ExamplePdf.src}
+        download="Example-PDF-document"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button>Download .pdf file</button>
+      </a> */}
 			</div>
       </div>
       </div>
