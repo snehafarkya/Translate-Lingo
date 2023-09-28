@@ -7,7 +7,7 @@ import {
   RiArrowDownLine,
   RiTranslate,
 } from "react-icons/ri";
-import image from "./digital-translator-abstract-concept-illustration_335657-3769.avif";
+import image from "./image-removebg-preview (6).png";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 export default function Translate() {
@@ -93,12 +93,12 @@ export default function Translate() {
         <div className="hidden  bg-white  h-screen" id="cont" style={{ display: "none" }}>
           {/* <a href="https://Translate-lingo.authui.site/">Sign In</a> */}
           <Navbar/>
-          <div className="md:flex md:justify-between  grid grid-cols-1 mt-12 md:mt-0  md:flex-row md:items-center md:mx-44 mx-6">
+          <div className="md:flex md:justify-between  grid grid-cols-1 mt-12 md:mt-4  md:flex-row md:items-center md:mx-44 mx-6">
             <div className="md:order-2">
               <img
                 src={image}
                 alt="Image here"
-                className="w-[400px] md:w-auto"
+                className="w-[400px] md:w-[600px] "
               />
             </div>
             <div className="md:order-1 md:w-1/2">
@@ -160,7 +160,7 @@ export default function Translate() {
       </div> */}
 
           <div
-            class="min-h-full  py-6 flex flex-col justify-center sm:py-12  "
+            class="min-h-full py-6 flex flex-col justify-center sm:py-12  "
             id="formm"
           >
             <div class="relative py-3 sm:max-w-xl mx-auto  w-[80%] rounded-xl">
