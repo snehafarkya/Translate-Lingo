@@ -5,6 +5,11 @@
   background-size: cover;
 
 }
+.back{
+  background-image: url("https://wallpaperaccess.com/full/2077882.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

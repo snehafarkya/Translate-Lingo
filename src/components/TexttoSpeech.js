@@ -29,7 +29,7 @@ const Speech = () => {
   }
 
 	return (
-    <div className="h-screen w-screen flex flex-col  ">
+    <div className="h-screen w-screen flex flex-col  back">
       <Navbar />
 
 		<div className="speech flex my-auto">
