@@ -118,8 +118,8 @@ export default function Translate() {
                   Relationships Like Never Before!
                 </p>
                 <a href="#formm">
-                  <button className="bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200" >
-                    Get Started <RiArrowDownLine />
+                  <button className="group bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200" >
+                    Get Started <RiArrowDownLine className="relative group-hover:top-1 transition ease-in-out duration-150 group-hover:font-bold"/>
                   </button>
                 </a>
               </div>
