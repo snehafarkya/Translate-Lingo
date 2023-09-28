@@ -20,7 +20,7 @@ export default function Translate() {
   setTimeout(function () {
     var spin = (document.getElementById("spin").style.display = "none");
     var cont = (document.getElementById("cont").style.display = "block");
-  }, 4000);
+  }, 3000);
   // get the language of text input
   const getLanguageSource = () => {
     axios
