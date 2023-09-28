@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Navbar from "./Navbar";
-import { AiOutlineAudio } from "react-icons/ai";
+import { AiFillAudio, AiOutlineAudio } from "react-icons/ai";
 const Speech = () => {
 	const [value, setValue] = React.useState("");
+  const [show,setShow] = useState(true)
 	const { speak } = useSpeechSynthesis();
   // const ExamplePdf = new Audio('../end(enhanced).wav');
   // const Audio = '/end(enhanced).wav';
@@ -18,6 +19,7 @@ const Speech = () => {
   //   aTag.remove();
   // }
   const click = ()=>{
+    setShow(prev => (!prev))
     if(!value){
       speak({ text: "Nothing to speak! Write something first." })
     }
@@ -57,7 +59,7 @@ const Speech = () => {
 				<button 
           class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
           onClick={click }>
-					Listen <AiOutlineAudio/>
+					Listen {show?<AiOutlineAudio/> : <AiFillAudio />} 
 				</button>
      {/* <button> <audio src={require("../audi.mp3")} autoPlay controls > Download </audio></button> */}
 
