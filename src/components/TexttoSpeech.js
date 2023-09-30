@@ -200,33 +200,21 @@ const Speech = () => {
           <p className="md:text-2xl text-lg text-white text-center mt-4">
             Welcome to{" "}
             <span className="text-purple-300 uppercase">TranslateLingo</span>{" "}
-            where you can:
+            ! Here you can:
           </p>
           <ol className="md:text-xl text-sm text-white list-decimal text-left pl-4 leading-[48px] ">
             <li className="md:my-2">
-              Translate any sentence to 30+ different languages
+              Type or paste any text here and see the magic.
             </li>
             <li className="md:my-2">
-              Say something and it will write for you. Go{" "}
-              <a
-                href="/speech-to-text"
-                className="text-purple-300 hover:text-purple-600"
-              >
-                here
-              </a>{" "}
+              Try listening without writing anything 🤭
             </li>
             <li className="md:my-2">
-              Write anything and your AI assistant will read it for you. Try it{" "}
-              <a
-                href="/text-to-speech"
-                className="text-purple-300 hover:text-purple-600"
-              >
-                here
-              </a>{" "}
+              Not just that, you can also copy the text🌀
             </li>
           </ol>
           <p className="text-center absolute bottom-6 md:text-white">
-            Made with 💜 by Sneha{" "}
+            Made with 💜 by <a href="https://linktr.ee/sneha_farkya" target="blank" className="md:text-purple-300 hover:text-purple-400 text-purple-700">Sneha</a> {" "}
           </p>
         </div>
         <div className="speech  py-auto h-screen md:h-auto flex flex-col my-auto items-center justify-center sm:py-12 ">

@@ -66,14 +66,14 @@ export default function ReactSpeech() {
             {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
             <div className="section-bg md:h-full flex flex-col justify-center items-center py-auto md:px-28 px-6 h-[600px]">
               <h2 className="pt-12 text-white md:text-5xl text-3xl">Connecting <span className="text-purple-300 uppercase">Globe</span>  by eliminating Language barrier...</h2>
-              <p className="md:text-2xl text-lg text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase">TranslateLingo</span> where you can:</p>
+              <p className="md:text-2xl text-lg text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase">TranslateLingo</span>! Here you can:</p>
               <ol className="md:text-xl text-sm text-white list-decimal text-left pl-4 leading-[48px] ">
-                <li className="md:my-2">Translate any sentence to 30+ different languages</li>
-                <li className="md:my-2">Say something and it will write for you. Go <a href="/speech-to-text" className="text-purple-300 hover:text-purple-600">here</a>  </li>
-                <li className="md:my-2">Write anything and your AI assistant will read it for you. Try it  <a href="/text-to-speech" className="text-purple-300 hover:text-purple-600">here</a> </li>
+                <li className="md:my-2">Speak anything in English and let AI type it for you.</li>
+                <li className="md:my-2">It doesn't end up to here! You can literally copy what Ai typed for you 🌀 </li>
+                <li className="md:my-2">You can reset or stop the listener </li>
 
               </ol>
-              <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by Sneha </p>
+              <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by <a href="https://linktr.ee/sneha_farkya" target="blank" className="md:text-purple-300 hover:text-purple-400 text-purple-700">Sneha</a> </p>
 
             </div>
         <div
