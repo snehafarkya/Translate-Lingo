@@ -201,7 +201,7 @@ const Speech = () => {
           <img src={logo} alt="" className="md:hidden"/>
           <p className="md:text-2xl text-xl text-white text-center mt-4">
             Welcome to{" "}
-            <span className="text-purple-300 uppercase">TranslateLingo</span>{" "}
+            <span className="text-purple-300 uppercase font-bold">TranslateLingo</span>{" "}
             ! Here you can:
           </p>
           <ol className="md:text-xl text-lg text-white list-decimal md:text-left text-justify pl-4 leading-[48px] ">
@@ -210,9 +210,6 @@ const Speech = () => {
             </li>
             <li className="md:my-2">
               Try listening without writing anything 🤭
-            </li>
-            <li className="md:my-2">
-              Not just that, you can also copy the text🌀
             </li>
             <li className="md:my-2">
               Not just that, you can also copy the text🌀
