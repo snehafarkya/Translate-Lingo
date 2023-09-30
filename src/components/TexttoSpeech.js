@@ -3,6 +3,7 @@ import AudioAnalyser from "react-audio-analyser";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Navbar from "./Navbar";
 import { AiFillAudio, AiOutlineAudio } from "react-icons/ai";
+import { RiDownload2Line } from "react-icons/ri";
 const Speech = () => {
   const [value, setValue] = React.useState("");
   const [show, setShow] = useState(true);
@@ -24,7 +25,7 @@ const Speech = () => {
   //   aTag.remove();
   // }
   const click = () => {
-    controlAudio("recording")
+    controlAudio("recording");
 
     setShow((prev) => !prev);
     if (!value) {
@@ -32,7 +33,6 @@ const Speech = () => {
     } else {
       speak({ text: value });
     }
-
   };
 
   const controlAudio = (newStatus) => {
@@ -101,35 +101,37 @@ const Speech = () => {
                 ></textarea>
               </div>
               <div className="group flex justify-center">
-                
-      <AudioAnalyser {...audioProps}>
-                <div className="btn-box">
-          {/* <button className="btn" onClick={() => controlAudio("recording")}>
+                <AudioAnalyser {...audioProps}>
+                  <div className="btn-box flex gap-2">
+                    {/* <button className="btn" onClick={() => controlAudio("recording")}>
             Start
           </button> */}
-          <button
-                  class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
-                  onClick={click}
-                >
-                  Listen {show ? <AiOutlineAudio /> : <AiFillAudio />}
-                </button>
-          {/* <button className="btn" onClick={() => controlAudio("paused")}>
+                    <button
+                      class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                      onClick={click}
+                    >
+                      Listen {show ? <AiOutlineAudio /> : <AiFillAudio />}
+                    </button>
+                    {/* <button className="btn" onClick={() => controlAudio("paused")}>
             Pause
           </button> */}
-          <button className="btn" onClick={() => controlAudio("inactive")}>
-            Stop
-          </button>
-          {/* <button className="btn" onClick={() => console.log(AudioAnalyser)}>
+                    <button
+                      className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                      onClick={() => controlAudio("inactive")}
+                    >
+                      Download <RiDownload2Line />
+                    </button>
+                    {/* <button className="btn" onClick={() => console.log(AudioAnalyser)}>
             Log
           </button> */}
-        </div>
-      </AudioAnalyser>
-      {/* <p>choose output type</p>
+                  </div>
+                </AudioAnalyser>
+                {/* <p>choose output type</p>
       <select name="" id="" onChange={changeScheme} value={audioType}>
         <option value="audio/webm">audio/webm（default）</option>
         <option value="audio/wav">audio/wav</option>
         <option value="audio/mp3">audio/mp3</option> */}
-      {/* </select> */}
+                {/* </select> */}
                 {/* <button> <audio src={require("../audi.mp3")} autoPlay controls > Download </audio></button> */}
 
                 {/* <a

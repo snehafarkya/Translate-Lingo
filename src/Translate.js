@@ -171,7 +171,7 @@ export default function Translate() {
                 <li className="md:my-2">Write anything and your AI assistant will read it for you. Try it  <a href="/text-to-speech" className="text-purple-300 hover:text-purple-600">here</a> </li>
 
               </ol>
-          <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by Sneha </p>
+              <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by Sneha </p>
 
             </div>
           <div
