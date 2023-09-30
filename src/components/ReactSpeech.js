@@ -61,6 +61,21 @@ export default function ReactSpeech() {
     <>
       <div className="h-screen w-screen flex flex-col back ">
         <Navbar />
+        <div className="section relative grid md:grid-cols-2 flex-col items-center  md:h-screen ">
+            {/* <img src="https://www.statnews.com/wp-content/uploads/2018/11/brain-signals-1000px-645x563.gif" alt="" className="rounded-full hover:border-purple-700 h-[400px] w-[400px] hover:border-8 transition ease-in-out duration-200 border-2 border-transparent border-solid" /> */}
+            {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
+            <div className="section-bg md:h-full flex flex-col justify-center items-center py-auto md:px-28 px-6 h-[600px]">
+              <h2 className="pt-12 text-white md:text-5xl text-3xl">Connecting <span className="text-purple-300 uppercase">Globe</span>  by eliminating Language barrier...</h2>
+              <p className="md:text-2xl text-lg text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase">TranslateLingo</span> where you can:</p>
+              <ol className="md:text-xl text-sm text-white list-decimal text-left pl-4 leading-[48px] ">
+                <li className="md:my-2">Translate any sentence to 30+ different languages</li>
+                <li className="md:my-2">Say something and it will write for you. Go <a href="/speech-to-text" className="text-purple-300 hover:text-purple-600">here</a>  </li>
+                <li className="md:my-2">Write anything and your AI assistant will read it for you. Try it  <a href="/text-to-speech" className="text-purple-300 hover:text-purple-600">here</a> </li>
+
+              </ol>
+              <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by Sneha </p>
+
+            </div>
         <div
           class="  py-6 flex flex-col my-auto items-center justify-center sm:py-12  "
           id="formm"
@@ -136,6 +151,7 @@ export default function ReactSpeech() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
