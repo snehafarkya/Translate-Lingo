@@ -61,7 +61,7 @@ export default function ReactSpeech() {
     <>
       <div className="h-screen w-screen flex flex-col back ">
         <Navbar />
-        <div className="section relative grid md:grid-cols-2 flex-col items-center  md:h-screen ">
+        <div className="section relative grid md:grid-cols-2 grid-cols-1 items-center h-auto md:h-screen ">
             {/* <img src="https://www.statnews.com/wp-content/uploads/2018/11/brain-signals-1000px-645x563.gif" alt="" className="rounded-full hover:border-purple-700 h-[400px] w-[400px] hover:border-8 transition ease-in-out duration-200 border-2 border-transparent border-solid" /> */}
             {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
             <div className="section-bg md:h-full flex flex-col justify-center items-center py-auto md:px-28 px-6 h-[600px]">
@@ -77,7 +77,7 @@ export default function ReactSpeech() {
 
             </div>
         <div
-          class="  py-6 flex flex-col my-auto items-center justify-center sm:py-12  "
+          class="  py-auto h-screen md:h-auto flex flex-col my-auto items-center justify-center sm:py-12  "
           id="formm"
         >
           <div class="relative py-3 sm:max-w-xl mx-auto  rounded-xl">
