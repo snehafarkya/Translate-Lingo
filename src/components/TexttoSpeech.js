@@ -184,9 +184,9 @@ const Speech = () => {
       speak({ text: value });
     }
   };
-  const copy =()=>{
-    navigator.clipboard.writeText(`${value}`);
-  }
+  // const copy =()=>{
+  //   navigator.clipboard.writeText(`${value}`);
+  // }
   return (
     <div className="h-screen w-screen flex flex-col back">
       <Navbar />
@@ -253,9 +253,9 @@ const Speech = () => {
                   >
                     Listen {show ? <AiOutlineAudio /> : <AiFillAudio />}
                   </button>
-                  <button 
+                  {/* <button 
                         className=" gap-1 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
-                        onClick={copy()}>Copy {show ? <AiOutlineCopy /> : <TiTickOutline />}</button>
+                        onClick={copy()}>Copy {show ? <AiOutlineCopy /> : <TiTickOutline />}</button> */}
                   {/* <button> <audio src={require("../audi.mp3")} autoPlay controls > Download </audio></button> */}
 
                   {/* <a
