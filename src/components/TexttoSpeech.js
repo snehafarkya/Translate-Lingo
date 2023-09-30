@@ -3,7 +3,7 @@ import AudioAnalyser from "react-audio-analyser";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Navbar from "./Navbar";
 import { AiFillAudio, AiOutlineAudio } from "react-icons/ai";
-import { RiDownload2Line } from "react-icons/ri";
+import { RiDownload2Fill, RiDownload2Line } from "react-icons/ri";
 const Speech = () => {
   const [value, setValue] = React.useState("");
   const [show, setShow] = useState(true);
@@ -102,7 +102,7 @@ const Speech = () => {
               </div>
               <div className="group flex justify-center">
                 <AudioAnalyser {...audioProps}>
-                  <div className="btn-box flex gap-2">
+                  <div className="btn-box flex gap-2 pb-2">
                     {/* <button className="btn" onClick={() => controlAudio("recording")}>
             Start
           </button> */}
@@ -119,7 +119,7 @@ const Speech = () => {
                       className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
                       onClick={() => controlAudio("inactive")}
                     >
-                      Download <RiDownload2Line />
+                      Download {show ? <RiDownload2Line /> : <RiDownload2Fill /> }
                     </button>
                     {/* <button className="btn" onClick={() => console.log(AudioAnalyser)}>
             Log

@@ -154,3 +154,7 @@ body {
 .audioContainer canvas{
   display: none;
 }
+ audio::-webkit-media-controls-panel{
+  background: #d5affc;
+  color: white;
+}
