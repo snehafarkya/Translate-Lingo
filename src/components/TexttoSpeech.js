@@ -192,9 +192,9 @@ const Speech = () => {
       <div className="section relative grid md:grid-cols-2 grid-cols-1 items-center  md:h-screen ">
         {/* <img src="https://www.statnews.com/wp-content/uploads/2018/11/brain-signals-1000px-645x563.gif" alt="" className="rounded-full hover:border-purple-700 h-[400px] w-[400px] hover:border-8 transition ease-in-out duration-200 border-2 border-transparent border-solid" /> */}
         {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
-        <div className="section-bg md:h-full  flex flex-col justify-center items-center py-auto md:px-28 px-6 h-[100vh]">
-          <h2 className="pt-12 text-white md:text-5xl text-4xl">
-            Connecting <span className="text-purple-300 uppercase">Globe</span>{" "}
+        <div className="section-bg md:h-full  flex flex-col md:justify-center items-center py-auto md:px-28 px-6 h-[100vh]">
+          <h2 className="pt-12 text-white md:text-5xl text-5xl">
+            Connecting <span className="text-purple-300 uppercase font-bold">Globe</span>{" "}
             by eliminating Language barrier...
           </h2>
           <p className="md:text-2xl text-xl text-white text-center mt-4">
