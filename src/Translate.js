@@ -164,7 +164,7 @@ export default function Translate() {
             {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
             <div className="section-bg md:h-full md:w-[50%] flex flex-col justify-center items-center py-auto md:px-28 px-6 pb-12">
               <h2 className="pt-12 text-white md:text-5xl text-5xl">Connecting <span className="text-purple-300 uppercase">Globe</span>  by eliminating Language barrier...</h2>
-              <p className="md:text-2xl text-xl text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase">TranslateLingo</span> where you can:</p>
+              <p className="md:text-2xl text-xl text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase font-bold">TranslateLingo</span> where you can:</p>
               <ol className="md:text-xl text-lg text-white list-decimal text-left pl-4 leading-[48px] ">
                 <li className="md:my-2">Translate any sentence to 30+ different languages</li>
                 <li className="md:my-2">Say something and it will write for you. Go <a href="/speech-to-text" className="text-purple-300 hover:text-purple-600">here</a>  </li>
