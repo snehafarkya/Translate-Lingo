@@ -59,6 +59,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.navbar{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .section-bg{
   background: url("./bgimage.jpg");
   background-size: cover;
