@@ -33,6 +33,7 @@ const Speech = () => {
     } else {
       speak({ text: value });
     }
+
   };
 
   const controlAudio = (newStatus) => {
