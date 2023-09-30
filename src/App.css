@@ -60,7 +60,7 @@ body {
   justify-content: center;
 }
 .section-bg{
-  background: url(https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg);
+  background: url("./bgimage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
