@@ -49,6 +49,12 @@
   margin-bottom: 15px;
   outline: none !important;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent; 
+  tap-highlight-color: transparent; 
+}
+
 html, body {
   scroll-behavior: smooth;
 }
