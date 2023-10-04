@@ -2,9 +2,27 @@
  
 ![image](https://github.com/snehafarkya/Translate-Lingo/assets/63949465/42e63332-6df6-4c96-9785-cb9a9cf333d2)
 
-<img src"https://miro.medium.com/v2/resize:fit:1400/0*McOGR_vW3LivYNor.png" />
+## The idea behind this:
+I always wonder if we can have a translator, AI listener, and speech converter all in one place. And I made it happen. It’s a beginner project and I welcome you all to contribute in this.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features:
+You can translate any text into 30 different languages and copy that resulting text.
+
+You can record text and AI will write it for you. You have a pause button and a reset option there as well.
+
+You can save time by doing the second step.
+
+Also, you can type and listen to your text
+
+## Future plans:
+Providing voice translation so that users can speak and then translate into another language.
+
+Adding download functionality in Text-to-Speech so that user can download the AI voice and use it to make reels or videos.
+
+## How you can contribute?
+If you find these project innovative and have ideas to make it even better, you can go to the github of this project and raise an issue. In this way, we all can build a useful website💥
+
+Looking forward to get active response on this. Hope you all use it wisely💜
 
 ## Available Scripts
 
