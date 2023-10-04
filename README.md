@@ -19,6 +19,12 @@ I always wonder if we can have a translator, AI listener, and speech converter a
 
 - Adding download functionality in Text-to-Speech so that user can download the AI voice and use it to make reels or videos.
 
+## 😇Support: 
+ I've launched this project on **Peerlist spotlight** and would highly appreciate if you can support me by your upvote. Here's how you can do this: 
+
+https://github.com/snehafarkya/Translate-Lingo/assets/63949465/02da1c06-f401-4962-9838-2ab6b70af01e
+
+
 ## 📩How you can contribute?
 If you find these project innovative and have ideas to make it even better, you can go to the github of this project and raise an issue. In this way, we all can build a useful website💥
 
