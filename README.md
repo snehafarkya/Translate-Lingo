@@ -6,13 +6,13 @@
 I always wonder if we can have a translator, AI listener, and speech converter all in one place. And I made it happen. It’s a beginner project and I welcome you all to contribute in this.
 
 ## Features:
-You can translate any text into 30 different languages and copy that resulting text.
+- You can translate any text into 30 different languages and copy that resulting text.
 
-You can record text and AI will write it for you. You have a pause button and a reset option there as well.
+- You can record text and AI will write it for you. You have a pause button and a reset option there as well.
 
-You can save time by doing the second step.
+- You can save time by doing the second step.
 
-Also, you can type and listen to your text
+- Also, you can type and listen to your text
 
 ## Future plans:
 Providing voice translation so that users can speak and then translate into another language.
