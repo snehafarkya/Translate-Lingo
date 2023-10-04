@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+ # TranslateLingo 💜 , participating in Hacktoberfest 2023
+ 
+![image](https://github.com/snehafarkya/Translate-Lingo/assets/63949465/42e63332-6df6-4c96-9785-cb9a9cf333d2)
+
+<img src"https://miro.medium.com/v2/resize:fit:1400/0*McOGR_vW3LivYNor.png" />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
