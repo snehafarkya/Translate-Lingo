@@ -1,7 +1,7 @@
  # TranslateLingo 💜 , participating in Hacktoberfest 2023
- 
-![image](https://github.com/snehafarkya/Translate-Lingo/assets/63949465/42e63332-6df6-4c96-9785-cb9a9cf333d2)
+![Untitled](https://github.com/snehafarkya/Translate-Lingo/assets/63949465/8d6035aa-d11e-4840-a878-06ae06e42828)
 
+ 
 ## The idea behind this:
 I always wonder if we can have a translator, AI listener, and speech converter all in one place. And I made it happen. It’s a beginner project and I welcome you all to contribute in this.
 
