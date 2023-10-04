@@ -1,4 +1,4 @@
- # TranslateLingo 💜 , participating in Hacktoberfest 2023
+ # TranslateLingo💜 is participating in Hacktoberfest 2023🎉
 ![Untitled](https://github.com/snehafarkya/Translate-Lingo/assets/63949465/8d6035aa-d11e-4840-a878-06ae06e42828)
 
  
