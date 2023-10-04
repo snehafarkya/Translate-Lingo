@@ -67,10 +67,12 @@ export default function Translate() {
   }, [textInput]);
 
   // copy text of resultant field
+
   const copy = () => {
     var mytext = document.getElementById("text").value;
 
     if (mytext) {
+
       navigator.clipboard.writeText(mytext);
       // alert("Text copied");
       var file = (document.getElementById("file").style.display = "none");
@@ -83,10 +85,9 @@ export default function Translate() {
       }, 1000);
 
       // var clickMe = document.getElementById('clickMe').style.background = "green";
-    } else {
-      alert("Nothing to copy!");
-    }
+
   };
+}
   return (
     <>
       <div className="h-screen loader bg-transparent" id="spin"></div>
@@ -245,7 +246,7 @@ export default function Translate() {
                         <button
                           onClick={copy}
                           id="clickMe"
-                          className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                          className={`${resultText ? 'cursor-pointer transition ease-in-out duration-200 hover:text-white hover:bg-purple-700 hover:shadow-lg' : 'cursor-not-allowed'} gap-1 border-solid  border-purple-700 border-2 px-8 py-4 text-purple-700  bg-white rounded-lg flex justify-center items-center`}
                         >
                           {" "}{buttonText}
                           <AiOutlineCopy id="file" /> {" "}
