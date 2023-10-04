@@ -15,9 +15,9 @@ I always wonder if we can have a translator, AI listener, and speech converter a
 - Also, you can type and listen to your text
 
 ## Future plans:
-Providing voice translation so that users can speak and then translate into another language.
+- Providing voice translation so that users can speak and then translate into another language.
 
-Adding download functionality in Text-to-Speech so that user can download the AI voice and use it to make reels or videos.
+- Adding download functionality in Text-to-Speech so that user can download the AI voice and use it to make reels or videos.
 
 ## How you can contribute?
 If you find these project innovative and have ideas to make it even better, you can go to the github of this project and raise an issue. In this way, we all can build a useful website💥
