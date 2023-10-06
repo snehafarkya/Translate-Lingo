@@ -66,7 +66,8 @@ body {
   justify-content: center;
 }
 .navbar{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 14px 32px;
+  border-bottom: 1px solid #69696912;
 }
 .section-bg{
   background: url("./bgimage.jpg");
