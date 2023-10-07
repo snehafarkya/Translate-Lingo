@@ -39,5 +39,11 @@ If you find these project innovative and have ideas to make it even better, you 
 - Wait for my response🥰
 - Last and most imp, do not forget to star this repo ⭐
 
+## ⚡Contributors
+<div align="center">
+  <a href="https://github.com/snehafarkya/translate-lingo/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=snehafarkya/translate-lingo" />
+  </a>
+</div>
 Looking forward to get active response on this. Hope you all use it wisely💜
 
