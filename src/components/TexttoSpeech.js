@@ -158,12 +158,14 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import Navbar from "./Navbar";
 import { AiFillAudio,AiOutlineCopy, AiOutlineAudio } from "react-icons/ai";
 import {  TiTickOutline } from "react-icons/ti";
+import {BsStopCircleFill} from "react-icons/bs"
 import logo from '../logo.png'
 
 const Speech = () => {
   const [value, setValue] = React.useState("");
   const [show, setShow] = useState(true);
-  const { speak } = useSpeechSynthesis();
+  const { speak, cancel } = useSpeechSynthesis();
+  const [isPlaying, setIsPlaying] = useState(false);
   // const ExamplePdf = new Audio('../end(enhanced).wav');
   // const Audio = '/end(enhanced).wav';
 
@@ -181,9 +183,18 @@ const Speech = () => {
     if (!value) {
       speak({ text: "Nothing to speak! Write something first." });
     } else {
-      speak({ text: value });
+      setIsPlaying(true);
+      speak({ 
+        text: value,
+        onEnd: () => setIsPlaying(false)
+      });
     }
   };
+
+  const stop = () =>{
+    setIsPlaying(false);
+    cancel();
+  }
   // const copy =()=>{
   //   navigator.clipboard.writeText(`${value}`);
   // }
@@ -253,6 +264,15 @@ const Speech = () => {
                   >
                     Listen {show ? <AiOutlineAudio /> : <AiFillAudio />}
                   </button>
+                  { isPlaying &&(
+                  <button
+                    class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                    onClick={stop}
+                  >
+                    Stop <BsStopCircleFill/>
+                  </button>
+                  )
+                  }
                   {/* <button 
                         className=" gap-1 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center transition ease-in-out duration-150 transition ease-in-out duration-200"
                         onClick={copy()}>Copy {show ? <AiOutlineCopy /> : <TiTickOutline />}</button> */}
