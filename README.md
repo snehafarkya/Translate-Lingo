@@ -42,7 +42,7 @@ If you find these project innovative and have ideas to make it even better, you 
 ## ⚡Contributors
 <div align="center">
   <a href="https://github.com/snehafarkya/translate-lingo/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=snehafarkya/translate-lingo" width="100px;" />
+    <img src="https://contrib.rocks/image?repo=snehafarkya/translate-lingo" width="120px;" />
   </a>
 </div>
 Looking forward to get active response on this. Hope you all use it wisely💜

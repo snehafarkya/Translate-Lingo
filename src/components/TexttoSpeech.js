@@ -258,6 +258,7 @@ const Speech = () => {
                   ></textarea>
                 </div>
                 <div className="group flex justify-center gap-2">
+                  
                   <button
                     class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
                     onClick={click}
