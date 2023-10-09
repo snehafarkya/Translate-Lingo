@@ -33,7 +33,7 @@ If you find these project innovative and have ideas to make it even better, you 
 - Go to your specified folder and write `git clone <copied-link>`
 - Go to the folder by using `cd` command.
 - Open your favorite editor.
-- Don't forget to make a new branch by writing `git branch -b <branch-name>`
+- Don't forget to make a new branch by writing `git checkout -b <branch-name>`
 - Do whatever changes you want.
 - Push your branch and open pull request. If you are a beginner and want to know how to raise pr, read that article: [here](https://snehafarkya.hashnode.dev/initiating-pull-requests-on-github-hacktoberfest-2023-edition)
 - Wait for my response🥰
