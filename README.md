@@ -12,7 +12,7 @@ I always wonder if we can have a translator, AI listener, and speech converter a
 
 - You can save time by doing the second step.
 
-- Also, you can type and listen to your text
+- Also, you can type and listen to your text anytime.
 
 ## 📑Future plans:
 - Providing voice translation so that users can speak and then translate into another language.
