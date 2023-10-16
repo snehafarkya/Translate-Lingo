@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineCopy } from "react-icons/ai";
 import { TiTickOutline } from "react-icons/ti";
-import logo from './logo.png'
+import logo from "./logo.png";
 import {
   RiArrowDownCircleLine,
   RiArrowDownLine,
@@ -31,6 +31,9 @@ export default function Translate() {
       .then((response) => {
         setdetectedLanguageKey(response.data[0].language);
         console.log(response.data[0].language);
+      })
+      .catch((error) => {
+        console.log("error: ", error);
       });
   };
 
@@ -45,10 +48,15 @@ export default function Translate() {
       source: detectLanguageKey,
       target: textLanguageKey,
     };
-    axios.post(`https://libretranslate.de/translate`, data).then((response) => {
-      setResultText(response.data.translatedText);
-      console.log(response.data.translatedText);
-    });
+    axios
+      .post(`https://libretranslate.de/translate`, data)
+      .then((response) => {
+        setResultText(response.data.translatedText);
+        console.log(response.data.translatedText);
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
   };
 
   const languageKey = (selectedLanguage) => {
@@ -59,7 +67,7 @@ export default function Translate() {
   useEffect(() => {
     axios.get(`https://libretranslate.de/languages`).then((response) => {
       setLanguagesList(response.data);
-      console.log("lang", response.data);
+      // console.log("lang", response.data);
     });
 
     getLanguageSource();
@@ -91,9 +99,13 @@ export default function Translate() {
     <>
       <div className="h-screen loader bg-transparent" id="spin"></div>
       <div className="">
-        <div className="hidden  bg-white  h-screen" id="cont" style={{ display: "none" }}>
+        <div
+          className="hidden  bg-white  h-screen"
+          id="cont"
+          style={{ display: "none" }}
+        >
           {/* <a href="https://Translate-lingo.authui.site/">Sign In</a> */}
-          <Navbar/>
+          <Navbar />
           <div className="md:flex md:justify-between  grid grid-cols-1 mt-12 md:mt-4  md:flex-row md:items-center md:mx-44 mx-6">
             <div className="md:order-2">
               <img
@@ -119,8 +131,9 @@ export default function Translate() {
                   Relationships Like Never Before!
                 </p>
                 <a href="#formm">
-                  <button className="group bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200" >
-                    Get Started <RiArrowDownLine className="relative group-hover:top-1 transition ease-in-out duration-150 group-hover:font-bold"/>
+                  <button className="group bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg transition ease-in-out duration-200">
+                    Get Started{" "}
+                    <RiArrowDownLine className="relative group-hover:top-1 transition ease-in-out duration-150 group-hover:font-bold" />
                   </button>
                 </a>
               </div>
@@ -163,105 +176,154 @@ export default function Translate() {
             {/* <img src="https://www.statnews.com/wp-content/uploads/2018/11/brain-signals-1000px-645x563.gif" alt="" className="rounded-full hover:border-purple-700 h-[400px] w-[400px] hover:border-8 transition ease-in-out duration-200 border-2 border-transparent border-solid" /> */}
             {/* <img src="https://i.pinimg.com/1200x/d0/3f/e6/d03fe65c389e72b87473f1a4243b75f0.jpg" alt="" /> */}
             <div className="section-bg md:h-full md:w-[50%] flex flex-col justify-center items-center py-auto md:px-28 px-6 pb-12">
-              <h2 className="pt-12 text-white md:text-5xl text-5xl">Connecting <span className="text-purple-300 uppercase ">Globe</span>  by eliminating Language barrier...</h2>
-              <p className="md:text-2xl text-xl text-white text-center mt-4">Welcome to <span className="text-purple-300 uppercase font-bold">TranslateLingo</span> where you can:</p>
+              <h2 className="pt-12 text-white md:text-5xl text-5xl">
+                Connecting{" "}
+                <span className="text-purple-300 uppercase ">Globe</span> by
+                eliminating Language barrier...
+              </h2>
+              <p className="md:text-2xl text-xl text-white text-center mt-4">
+                Welcome to{" "}
+                <span className="text-purple-300 uppercase font-bold">
+                  TranslateLingo
+                </span>{" "}
+                where you can:
+              </p>
               <ol className="md:text-xl text-lg text-white list-decimal text-left pl-4 leading-[48px] ">
-                <li className="md:my-2">Translate any sentence to 30+ different languages</li>
-                <li className="md:my-2">Say something and it will write for you. Go <a href="/speech-to-text" className="text-purple-300 hover:text-purple-600">here</a>  </li>
-                <li className="md:my-2">Write anything and your AI assistant will read it for you. Try it  <a href="/text-to-speech" className="text-purple-300 hover:text-purple-600">here</a> </li>
-
+                <li className="md:my-2">
+                  Translate any sentence to 30+ different languages
+                </li>
+                Name
+                <li className="md:my-2">
+                  Say something and it will write for you. Go{" "}
+                  <a
+                    href="/speech-to-text"
+                    className="text-purple-300 hover:text-purple-600"
+                  >
+                    here
+                  </a>{" "}
+                </li>
+                <li className="md:my-2">
+                  Write anything and your AI assistant will read it for you. Try
+                  it{" "}
+                  <a
+                    href="/text-to-speech"
+                    className="text-purple-300 hover:text-purple-600"
+                  >
+                    here
+                  </a>{" "}
+                </li>
               </ol>
-              <p className="text-center absolute bottom-6 md:text-white">Made with 💜 by <a href="https://linktr.ee/sneha_farkya" target="blank" className="md:text-purple-300 hover:text-purple-400 text-purple-700">Sneha</a> </p>
-
+              <p className="text-center absolute bottom-6 md:text-white">
+                Made with 💜 by{" "}
+                <a
+                  href="https://linktr.ee/sneha_farkya"
+                  target="blank"
+                  className="md:text-purple-300 hover:text-purple-400 text-purple-700"
+                >
+                  Sneha
+                </a>{" "}
+              </p>
             </div>
-          <div
-            class="min-h-full py-24 flex flex-col justify-center sm:py-12  "
-            id="formm"
-          >
-            <div class="relative py-3 sm:max-w-xl md:mr-44 rounded-xl">
-              <div class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl"></div>
-              <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20">
-                <div class="max-w-md mx-auto">
-                  <div>
-                    <h1 class="text-2xl font-semibold">
-                      Go first with TranslateLingo 💜
-                    </h1>
-                  </div>
-                  <div class="divide-y divide-gray-200">
-                    <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                      <div class="relative">
-                        <input
-                          autocomplete="off"
-                          id="email"
-                          name="email"
-                          type="text"
-                          class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          onChange={(e) => setTextInput(e.target.value)}
-                        />
-                        <label
-                          for="email"
-                          class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                        >
-                          Type text to translate
-                        </label>
-                      </div>
+            <div
+              className="min-h-full py-24 flex flex-col justify-center sm:py-12  "
+              id="formm"
+            >
+              <div className="relative py-3 sm:max-w-xl md:mr-44 rounded-xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl"></div>
+                <div className="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20">
+                  <div className="max-w-md mx-auto">
+                    <div>
+                      <h1 className="text-2xl font-semibold">
+                        Go first with TranslateLingo 💜
+                      </h1>
+                    </div>
+                    Name
+                    <div className="divide-y divide-gray-200">
+                      <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                        <div className="relative">
+                          <input
+                            autoComplete="off"
+                            id="email"
+                            name="email"
+                            type="text"
+                            className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                            onChange={(e) => setTextInput(e.target.value)}
+                          />
+                          <label
+                            htmlFor="email"
+                            className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                          >
+                            Type text to translate
+                          </label>
+                        </div>
 
-                      <select
-                        className="select placeholder-transparent h-10 w-full border-b-2 bg-white border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 "
-                        onChange={languageKey}
-                      >
-                        {languagesList.map((language) => {
-                          return (
-                            <option value={language.code}>
-                              {language.name}
-                            </option>
-                          );
-                        })}
-                      </select>
-                      <div class="relative flex">
-                        <input
-                          readonly
-                          autocomplete="off"
-                          id="text"
-                          name="text"
-                          type="text"
-                          class=" mt-3 peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          value={resultText}
-                        />
-                        <label
-                          for="text"
-                          class="absolute left-0 -top-1 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 transition-all  peer-focus:text-gray-600 peer-focus:text-sm"
+                        <select
+                          className="select placeholder-transparent h-10 w-full border-b-2 bg-white border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 "
+                          onChange={languageKey}
                         >
-                          Your translated text
-                        </label>
-                      </div>
-                      <div class="relative flex gap-2">
-                        <button
-                          class="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
-                          onClick={translateText}
-                        >
-                          Translate <RiTranslate/>
-                        </button>
-                        <button
-                          onClick={copy}
-                          id="clickMe"
-                          className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
-                        >
-                          {" "}{buttonText}
-                          <AiOutlineCopy id="file" /> {" "}
-                          <TiTickOutline id="right" className="hidden" />{" "}
-                        </button>
-                      </div>
-                      <div className="">
-                        <p>Want to record and let AI type? <a href="/speech-to-text" className="text-purple-700 hover:underline hover:text-purple-700 font-bold">Click here! </a> </p>
+                          {languagesList.map((language) => {
+                            return (
+                              <option
+                                key={languagesList.indexOf(language)}
+                                value={language.code}
+                              >
+                                {language.name}
+                              </option>
+                            );
+                          })}
+                        </select>
+                        <div className="relative flex">
+                          <input
+                            readOnly
+                            autoComplete="off"
+                            id="text"
+                            name="text"
+                            type="text"
+                            className=" mt-3 peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                            value={resultText}
+                          />
+                          <label
+                            htmlFor="text"
+                            className="absolute left-0 -top-1 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 transition-all  peer-focus:text-gray-600 peer-focus:text-sm"
+                          >
+                            Your translated text
+                          </label>
+                        </div>
+                        <div className="relative flex gap-2">
+                          <button
+                            className="transition ease-in-out duration-200 bg-purple-700 text-white px-8 py-4 hover:shadow-lg hover:bg-white hover:text-purple-700 border-transparent border-2 hover:border-purple-700 flex gap-1 justify-center items-center rounded-lg"
+                            onClick={translateText}
+                          >
+                            Translate <RiTranslate />
+                          </button>
+                          <button
+                            onClick={copy}
+                            id="clickMe"
+                            className=" gap-1 transition ease-in-out duration-200 border-solid hover:shadow-lg border-purple-700 border-2 px-8 py-4 text-purple-700 hover:text-white hover:bg-purple-700 bg-white rounded-lg flex justify-center items-center"
+                          >
+                            {" "}
+                            {buttonText}
+                            <AiOutlineCopy id="file" />{" "}
+                            <TiTickOutline id="right" className="hidden" />{" "}
+                          </button>
+                        </div>
+                        <div className="">
+                          <p>
+                            Want to record and let AI type?{" "}
+                            <a
+                              href="/speech-to-text"
+                              className="text-purple-700 hover:underline hover:text-purple-700 font-bold"
+                            >
+                              Click here!{" "}
+                            </a>{" "}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
           </div>
         </div>
       </div>
